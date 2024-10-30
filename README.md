@@ -9,6 +9,9 @@ You can promote or demote personel.
 
 ## User guide
 
+git clone https://github.com/Ermegilius/reactor.git
+cd project folder
+npm i
 npm run fyl
 
 ## Reflection
