@@ -7,9 +7,7 @@ function EmployeeCard(props) {
     const clickHandler = () => {
         if (role === props.initRole) {
             setRole("team lead");
-            document.querySelector("button").innerText="Demote";
         } else if (role ==="team lead") {
-            document.querySelector("button").innerText="Promote";
             setRole(props.initRole);
         }
     }
