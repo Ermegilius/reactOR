@@ -1,5 +1,6 @@
 import EmployeeCard from './EmployeeCard.jsx';
 import './EmployeeList.css'
+import './Employees.jsx'
 
 function EmployeeList() {
     return (
