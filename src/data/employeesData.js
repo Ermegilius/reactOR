@@ -2,7 +2,7 @@ const employees = [
     {
         id: 1,
         name: "Vova",
-        role: "expert",
+        initRole: "expert",
         department: "Marketing",
         startDate: "1988-01-01",
         location: "Espoo",
@@ -12,7 +12,7 @@ const employees = [
     {
         id: 2,
         name: "Anna",
-        role: "specialist",
+        initRole: "specialist",
         department: "Human Resources",
         startDate: "2010-05-15",
         location: "Helsinki",
@@ -22,7 +22,7 @@ const employees = [
     {
         id: 3,
         name: "John",
-        role: "developer",
+        initRole: "developer",
         department: "IT",
         startDate: "2015-09-01",
         location: "Espoo",
@@ -32,7 +32,7 @@ const employees = [
     {
         id: 4,
         name: "Emma",
-        role: "designer",
+        initRole: "designer",
         department: "Marketing",
         startDate: "2018-11-12",
         location: "Tampere",
@@ -42,7 +42,7 @@ const employees = [
     {
         id: 5,
         name: "Michael",
-        role: "analyst",
+        initRole: "analyst",
         department: "Marketing",
         startDate: "2012-03-08",
         location: "Turku",
@@ -52,7 +52,7 @@ const employees = [
     {
         id: 6,
         name: "Sophia",
-        role: "HR specialist",
+        initRole: "HR specialist",
         department: "Human Resources",
         startDate: "2016-07-22",
         location: "Vantaa",
@@ -62,7 +62,7 @@ const employees = [
     {
         id: 7,
         name: "James",
-        role: "sales representative",
+        initRole: "sales representative",
         department: "Marketing",
         startDate: "2019-10-01",
         location: "Espoo",
@@ -72,7 +72,7 @@ const employees = [
     {
         id: 8,
         name: "Linda",
-        role: "content writer",
+        initRole: "content writer",
         department: "Marketing",
         startDate: "2014-02-15",
         location: "Helsinki",
@@ -82,7 +82,7 @@ const employees = [
     {
         id: 9,
         name: "Robert",
-        role: "developer",
+        initRole: "developer",
         department: "IT",
         startDate: "2013-06-10",
         location: "Espoo",
@@ -92,7 +92,7 @@ const employees = [
     {
         id: 10,
         name: "Olivia",
-        role: "junior developer",
+        initRole: "junior developer",
         department: "IT",
         startDate: "2024-08-03",
         location: "Tampere",

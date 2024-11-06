@@ -1,15 +1,22 @@
-import EmployeeCard from './EmployeeCard.jsx';
+import EmployeeCard from './EmployeeCard.jsx'
 import './EmployeeList.css'
-import './Employees.jsx'
+import employees from '../data/employeesData.js'
 
 function EmployeeList() {
     return (
-        <>
-            <EmployeeCard name="Vova" initRole="expert" department="procurement" salary = "666" birth = "26.01.1988" />
-            <EmployeeCard name="John" initRole="expert" department="procurement" salary = "31415" birth = "01.02.1999"/>
-            <EmployeeCard name="Vika" initRole="expert" department="procurement" salary = "6021023" birth = "20.10.1980"/>
-        </>
-    );
+        employees.map((elem)=>{
+            return(
+                <EmployeeCard key={elem.id}{...elem}/>//we are spreading it through all props. So we don't need to list it like that:
+                // name={elem.name}
+                // initRole={elem.initRole}
+                // department={elem.department}
+                // startDate={elem.startDate}
+                // location={elem.location}
+                // salary={elem.salary}
+                // birth={elem.birth}
+            );
+        })
+    )
 }
 
 export default EmployeeList;
