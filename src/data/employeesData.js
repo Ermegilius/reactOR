@@ -7,7 +7,8 @@ const employees = [
         startDate: "1988-01-01",
         location: "Espoo",
         salary: 666,
-        birth: "1950-01-26"
+        birth: "1950-01-26",
+        teamLead: false
     },
     {
         id: 2,
@@ -17,7 +18,8 @@ const employees = [
         startDate: "2010-05-15",
         location: "Helsinki",
         salary: 3500,
-        birth: "1980-03-14"
+        birth: "1980-03-14",
+        teamLead: false
     },
     {
         id: 3,
@@ -27,7 +29,8 @@ const employees = [
         startDate: "2015-09-01",
         location: "Espoo",
         salary: 3000,
-        birth: "1992-06-20"
+        birth: "1992-06-20",
+        teamLead: false
     },
     {
         id: 4,
@@ -37,7 +40,8 @@ const employees = [
         startDate: "2018-11-12",
         location: "Tampere",
         salary: 2900,
-        birth: "1989-04-30"
+        birth: "1989-04-30",
+        teamLead: false
     },
     {
         id: 5,
@@ -47,7 +51,8 @@ const employees = [
         startDate: "2012-03-08",
         location: "Turku",
         salary: 3200,
-        birth: "1985-08-15"
+        birth: "1985-08-15",
+        teamLead: false
     },
     {
         id: 6,
@@ -57,7 +62,8 @@ const employees = [
         startDate: "2016-07-22",
         location: "Vantaa",
         salary: 2800,
-        birth: "1990-02-10"
+        birth: "1990-02-10",
+        teamLead: false
     },
     {
         id: 7,
@@ -67,7 +73,8 @@ const employees = [
         startDate: "2019-10-01",
         location: "Espoo",
         salary: 2700,
-        birth: "1995-11-25"
+        birth: "1995-11-25",
+        teamLead: false
     },
     {
         id: 8,
@@ -77,7 +84,8 @@ const employees = [
         startDate: "2014-02-15",
         location: "Helsinki",
         salary: 2600,
-        birth: "1987-09-05"
+        birth: "1987-09-05",
+        teamLead: false
     },
     {
         id: 9,
@@ -87,7 +95,8 @@ const employees = [
         startDate: "2013-06-10",
         location: "Espoo",
         salary: 4000,
-        birth: "1982-12-22"
+        birth: "1982-12-22",
+        teamLead: false
     },
     {
         id: 10,
@@ -97,7 +106,8 @@ const employees = [
         startDate: "2024-08-03",
         location: "Tampere",
         salary: 2500,
-        birth: "1998-07-18"
+        birth: "1998-07-18",
+        teamLead: false
     }
 ];
 
