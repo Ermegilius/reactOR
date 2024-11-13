@@ -1,4 +1,6 @@
-const Form = ({toggleFormEdit,role, department, location}) => {
+import { useState } from "react";
+
+const Form = ({role, department, location}) => {
     const [formData, setFormData] = useState({
         role,
         department,
@@ -8,13 +10,29 @@ const Form = ({toggleFormEdit,role, department, location}) => {
     const handleChange = (e) => {
         const {name, value} = e.target;
         setFormData((prevState) => ({...prevState, [name]:value}));
-    }
+    };
+
     return (
         <div>
             <form>
-                <input name='role' value={formData.role} onChange={handleChange} type='text'/>
-                <input name='department' value={formData.department} onChange={handleChange} type='text'/>
-                <input name='location' value={formData.location} onChange={handleChange} type='text'/>
+                <input
+                    name='role'
+                    value={formData.role}
+                    onChange={handleChange}
+                    type='text'
+                />
+                <input
+                    name='department'
+                    value={formData.department}
+                    onChange={handleChange}
+                    type='text'
+                />
+                <input
+                    name='location'
+                    value={formData.location}
+                    onChange={handleChange}
+                    type='text'
+                />
             </form>
         </div>
     )
