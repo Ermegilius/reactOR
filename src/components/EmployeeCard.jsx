@@ -66,7 +66,7 @@ const EmployeeCard = ({id, name,initRole,department,startDate, location, salary,
       text={toggleFormEdit ? "Save" : "Edit"}
     />
     {toggleFormEdit && (
-      <Form role={role} department={department} location={location}/>
+      <Form rogcle={role} department={department} location={location}/>
     )}
     </div> 
   );
