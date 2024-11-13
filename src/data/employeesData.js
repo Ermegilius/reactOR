@@ -14,7 +14,7 @@ const employees = [
         id: 2,
         name: "Anna",
         initRole: "specialist",
-        department: "Human Resources",
+        department: "HR",
         startDate: "2010-05-15",
         location: "Helsinki",
         salary: 3500,
@@ -35,7 +35,7 @@ const employees = [
     {
         id: 4,
         name: "Emma",
-        initRole: "designer",
+        initRole: "Designer",
         department: "Marketing",
         startDate: "2018-11-12",
         location: "Tampere",
@@ -57,8 +57,8 @@ const employees = [
     {
         id: 6,
         name: "Sophia",
-        initRole: "HR specialist",
-        department: "Human Resources",
+        initRole: "specialist",
+        department: "HR",
         startDate: "2016-07-22",
         location: "Vantaa",
         salary: 2800,

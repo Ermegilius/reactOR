@@ -10,3 +10,18 @@
 button {
     margin: .5rem;
 }
+
+.departmentMarketing {
+    background-color: #FFAAFF;
+    color: black;
+}
+
+.departmentHR {
+    background-color: #AAAAFF;
+    color: black;
+}
+
+.departmentIT {
+    background-color: #FFFFAA;
+    color: black;
+}
