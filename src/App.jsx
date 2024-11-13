@@ -16,9 +16,9 @@ function App() {
       <Header/>
       <main>
         <button onClick={handleLogIn}>
-          {isLoggedIn ? 'Click to log out' : 'Click to log in'}
+          {isLoggedIn ? 'Log out' : 'Log in'}
         </button>
-        {isLoggedIn ? <EmployeeList/> : <p>You must be logged in to see the list</p>}
+        {isLoggedIn ? <EmployeeList/> : <p>"Please log in again</p>}
       </main>
       <Footer/>
     </>
