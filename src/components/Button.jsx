@@ -1,6 +1,6 @@
 import './Button.css'
 
-const Button = ({click, text, type = 'button', role}) => {
+const Button = ({click, text, type, role}) => {
     const buttonClass = role === 'secondary' ? 'secondaryButton' : 'primatyButton';
     return (
     <button

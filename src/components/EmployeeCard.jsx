@@ -8,9 +8,21 @@ const currentDate = new Date();
 
 const EmployeeCard = ({id, name,initRole,department,startDate, location, salary, birth, teamLead}) => {
   const [isTeamLead, setTeamLead] = useState(teamLead);
-  const clickHandler = () => setTeamLead((isTeamLead)=>!isTeamLead);
+  const [isEditing, setIsEditing] = useState(false);
+  const [toggleFormEdit, setToggleFormEdit] = useState(false);
+
+  // const clickHandler = (e) => 
+  //   if (e.target.type === 'promoteButton') {
+  //     setTeamLead((isTeamLead)=>!isTeamLead);
+  //   } else if (e.target.type === editButton) {
+  //    setIsEditing((prevState)=>!prevState)
+  //   }
+
+
   const yearsWorked = currentDate.getFullYear() - new Date(startDate).getFullYear();
+
   const congrats = "Schedule recognition meeting."
+
   const departmentClassName =
     department === "Marketing" ? 'card departmentMarketing':
     department === "HR" ? 'card departmentHR':
@@ -39,8 +51,24 @@ const EmployeeCard = ({id, name,initRole,department,startDate, location, salary,
         text={isTeamLead ? ('Demote from Team Lead'):('Promote to Team Lead')}
         click={clickHandler}
         role='secondary'
+        type = 'promoteButton'
       />
-    </div>
+
+      <Button
+        text={isTeamLead ? ('Demote from Team Lead'):('Promote to Team Lead')}
+        click={clickHandler}
+        role='primary'
+        type = 'editButton'
+      />
+
+    <Button 
+      click = {()=> setToggleFormEdit(!toggleFormEdit)}
+      text={toggleFormEdit ? "Save" : "Edit"}
+    />
+    {toggleFormEdit && (
+      <Form role={role} department={department} location={location}/>
+    )}
+    </div> 
   );
 }
 
