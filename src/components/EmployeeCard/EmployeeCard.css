@@ -25,3 +25,16 @@ button {
     background-color: #FFFFAA;
     color: black;
 }
+
+.card-image {
+    flex: 1;
+    align-self: end;
+    display: flex;
+}
+
+.card-image img {
+    object-fit: cover;
+    width: 50%;
+    margin-left: auto;
+    margin-top: 1rem;
+}
