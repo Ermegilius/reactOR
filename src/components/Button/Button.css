@@ -1,9 +1,13 @@
+button{
+    padding: .2rem;
+}
+
 .secondaryButton {
-    background-color: #a3a3a3;
-    color: black;
+    background-color: #1a9c00;
+    color: #f7f7f7;
 }
 
 .primatyButton {
-    background-color: green;
-    color: red;
+    background-color: rgb(202, 81, 0);
+    color: #f7f7f7;
 }

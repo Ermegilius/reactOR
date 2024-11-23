@@ -4,6 +4,7 @@ import monthsWorked from '../../utilis/monthsWorked';
 import getDepartmentClass from "../../utilis/styleUtils";
 import Button from '../Button/Button';
 
+
 const currentDate = new Date();
 
 const EmployeeCard = ({name,initRole,department,startDate,location,salary,birth}) => {
@@ -16,7 +17,6 @@ const EmployeeCard = ({name,initRole,department,startDate,location,salary,birth}
   const congrats = "Schedule recognition meeting."
 
   const toggleTeamLead = () => setIsTeamLead((prev) => !prev);
-  const toggleFormEditing = () => setIsFormEditing((prev) => !prev);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -46,26 +46,24 @@ const EmployeeCard = ({name,initRole,department,startDate,location,salary,birth}
         (<p>&#9997;Schedule probation review.</p>):('')
       }
       <div className="card-image">
-          <img src={`https://robohash.org/${name}?set=set5`} alt={name} />
+        <img src={`https://robohash.org/${name}?set=set5`} alt={name} />
       </div>
 
-      <Button
-        text={isTeamLead ? 'Demote from Team Lead' : 'Promote to Team Lead'}
-        onClick={toggleTeamLead}
-        role= {isTeamLead ? 'primary' : 'secondary'}
-        type = 'button'
-      />
+      <div className='buttonContainer'>
+        <Button
+          text={isTeamLead ? 'Demote Team Lead' : 'Promote to Team Lead'}
+          onClick={toggleTeamLead}
+          role= {isTeamLead ? 'primary' : 'secondary'}
+          type = 'button'
+        />
 
-      <Button
-        text={isFormEditing ? 'Save' : 'Edit'}
-        onClick={toggleFormEditing}
-        role= {isFormEditing ? 'primary' : 'secondary'}
-        type = 'button'
-      />
-
-      {isFormEditing && (
-        <Form role={initRole} department={department} location={location}/>
-      )}
+        <Button
+          text={isFormEditing ? 'Save' : 'Edit'}
+          onClick={() => setIsFormEditing((prev) => !prev)}
+          role= {isFormEditing ? 'primary' : 'secondary'}
+          type = 'button'
+        />
+      </div>
     </div> 
   );
 }

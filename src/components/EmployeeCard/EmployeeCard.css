@@ -1,14 +1,12 @@
 .card {
- background-color: black;
- color: #d3d3d3;
- width: 200px;
- height: 300px;
- margin: .5rem;
- padding: .5rem;
-}
-
-button {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: #d3d3d3;
+    height: 400px;
+    width: 20%;
     margin: .5rem;
+    padding: .5rem;
 }
 
 .departmentMarketing {
@@ -27,14 +25,26 @@ button {
 }
 
 .card-image {
-    flex: 1;
-    align-self: end;
     display: flex;
+    justify-content: center;
+    height: 30%;
+    
 }
 
 .card-image img {
     object-fit: cover;
-    width: 50%;
-    margin-left: auto;
-    margin-top: 1rem;
+}
+
+input {
+    color: #f7f7f7;
+    width: 100%;
+    text-align: center;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    height: 20%;
+    justify-content:space-between;
 }
