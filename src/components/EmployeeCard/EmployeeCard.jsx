@@ -1,8 +1,10 @@
 import './EmployeeCard.css'
-import {useState} from 'react'
 import monthsWorked from '../../utilis/monthsWorked';
 import getDepartmentClass from "../../utilis/styleUtils";
 import Button from '../Button/Button';
+
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 
 const currentDate = new Date();
@@ -22,6 +24,20 @@ const EmployeeCard = ({name,initRole,department,startDate,location,salary,birth}
     const { name, value } = e.target;
     setPerson((prevState) => ({ ...prevState, [name]: value }));
   };
+
+  const updatePerson = async () => {
+    try {
+      await axios.put(`http://localhost:3001/persons/${person.id}`, person);
+    } catch (error) {
+      console.error("Failed to update person data", error);
+    }
+  }
+
+ /*  useEffect(() => {
+    if (!isFormEditing) {
+      updatePerson();
+    }
+  }, [isFormEditing]); */
 
   const renderEditableField = (value, name) =>
     isFormEditing ? (
