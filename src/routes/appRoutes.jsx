@@ -1,32 +1,35 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import Root from "../pages/Root";
 import List from "../pages/List";
 import Form from "../pages/Form";
 import Login from "../pages/Login";
 import ErrorPage from "../pages/ErrorPage";
+import SinglePage from "../components/SinglePage/SinglePage";
 
-const createRoutes = createBrowserRouter(
-  [
+export const router = (loggedIn, LogInAction) => {
+  return createBrowserRouter(
+    [
+      {
+        path: "/", element: loggedIn ? (< Root loggedIn={loggedIn} />) : (<Navigate to="/login" />), errorElement: <ErrorPage />,
+        children: 
+        [
+          { path: "/employees", element: <List /> }, // Removed duplicate Login path
+          { path: "/employees/:id", element: <SinglePage /> },
+          { path: "/new", element: <Form /> },
+        ],
+      },
+      {
+        path: '/login', element: <Login LogInAction={LogInAction} />
+      }
+    ],
     {
-      path: "/",
-      element: <Root />,
-      errorElement: <ErrorPage />,
-      children: [
-        { path: "/", element: <Login /> },
-        { path: "/employees", element: <List /> },
-        { path: "/new", element: <Form /> },
-      ],
-    },
-  ],
-  {
-    future: {
-      v7_relativeSplatPath: true,
-      v7_fetcherPersist: true,
-      v7_normalizeFormMethod: true,
-      v7_partialHydration: true,
-      v7_skipActionErrorRevalidation: true,
-    },
-  }
-);
-
-export default createRoutes;
+      future: {
+        v7_relativeSplatPath: true,
+        v7_fetcherPersist: true,
+        v7_normalizeFormMethod: true,
+        v7_partialHydration: true,
+        v7_skipActionErrorRevalidation: true,
+      },
+    }
+  );
+};

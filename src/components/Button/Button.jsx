@@ -1,7 +1,7 @@
 import './Button.css'
 
 const Button = ({onClick, text, type, role}) => {
-    const buttonClass = role === 'secondary' ? 'secondaryButton' : 'primatyButton';
+    const buttonClass = role === 'secondary' ? 'secondaryButton' : 'primaryButton';
 
     return (
         <button
@@ -9,8 +9,7 @@ const Button = ({onClick, text, type, role}) => {
             onClick={onClick}
             className={buttonClass}
             role={role}
-        >
-            {text} 
+        > {text} 
         </button>
     );
 };

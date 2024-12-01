@@ -1,13 +1,12 @@
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 import EmployeeCard from '../EmployeeCard/EmployeeCard.jsx';
 import './EmployeeList.css';
 
-//import {useNavigate} from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-
-
 function EmployeeList() {
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
     const [persons, setPersons] = useState([]);
     const [isLoading, setLoading] = useState(true);
 
@@ -23,22 +22,30 @@ function EmployeeList() {
         });
     }, []);
 
-/*     const handleNavigate = (id) => {
-        navigate(`/${id}`);
-    }; */
+    const handleNavigate = (id) => {
+        navigate(`/employees/${id}`);
+    };
+
+    const updatePerson = (updatedPerson) => {
+        setPersons((prevPersons) =>
+            prevPersons.map((person) =>
+                person.id === updatedPerson.id ? updatedPerson : person
+            )
+        );
+    };
 
     return (
-        <>
+        <div className='list'>
             {isLoading ?
-                (<p>Loading...</p>):
-                (<div className='list'>
-                    {persons.map((elem) => (
+                (<p>Loading...</p>
+                ) : (
+                    persons.map((person) => (
                         // Spreading all properties of the employee object as props for EmployeeCard
-                        <EmployeeCard key={elem.id} {...elem} />
-                    ))}
-                </div>)
+                        <EmployeeCard key={person.id} {...person} handleNavigate={handleNavigate} updatePerson={updatePerson}/>
+                    ))
+                )
             }
-        </>
+        </div>
     );
 };
 
