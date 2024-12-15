@@ -3,6 +3,7 @@ import Button from '../Button/Button';
 import './EmployeeCard.css';
 import monthsWorked from '../../utilis/monthsWorked';
 import getDepartmentClass from "../../utilis/styleUtils";
+import Alert from '@mui/material/Alert';
 import useAxios from '../../utilis/useAxios';
 
 const currentDate = new Date();
@@ -65,6 +66,7 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
           </div>
         ) : (
           <>
+            {alert.show && <Alert severity={alert.type}>{alert.message}</Alert>}
             <p>Role:{isTeamLead ? <span>⭐</span> : ''}{initRole}</p>
             <p>Department: {department}</p>
             <p>Salary: {salary}</p>

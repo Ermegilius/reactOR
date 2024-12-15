@@ -20,7 +20,7 @@ const useAxios = (baseUrl) => {
       const response = await axios[method](`${baseUrl}/${endpoint}`, payload);
       setData(response.data);
       console.log(response.data);
-      showAlert('Request successful', 'success');
+      showAlert('Successfully done!', 'success');
     } catch (err) {
       showAlert(`Error: ${err.message}`, 'error');
     } finally {
