@@ -1,15 +1,14 @@
 {
   "persons": [
     {
-      "id": "1",
       "name": "Vova",
       "initRole": "expert",
       "department": "Marketing",
       "startDate": "1988-01-01",
       "location": "Espoo",
-      "salary": 666,
+      "salary": "666",
       "birth": "1950-01-26",
-      "teamLead": false
+      "id": "1"
     },
     {
       "name": "Anna",
