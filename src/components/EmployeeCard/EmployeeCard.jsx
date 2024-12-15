@@ -1,9 +1,10 @@
 import { useState} from 'react';
-import axios from 'axios';
 import Button from '../Button/Button';
 import './EmployeeCard.css';
 import monthsWorked from '../../utilis/monthsWorked';
 import getDepartmentClass from "../../utilis/styleUtils";
+import Alert from '@mui/material/Alert';
+import useAxios from '../../utilis/useAxios';
 
 const currentDate = new Date();
 
@@ -20,6 +21,8 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
     birth: birth,
   });
 
+  const { update, alert } = useAxios('http://localhost:3001/persons');
+
   const yearsWorked = currentDate.getFullYear() - new Date(startDate).getFullYear();
   const congrats = "Schedule recognition meeting."//use it if it's time for a recognition meeting
 
@@ -31,10 +34,13 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
   const personEditHandler = async () => {
     try{
       if (isFormEditing) {
-        const response = await axios.put(`http://localhost:3001/persons/${id}`, person);
-        updatePerson(response.data); //update the parent component's state
+        const updatedPerson = { ...person, id }; 
+        await update(`${id}`, updatedPerson);
+        console.log(alert);
+        updatePerson(updatedPerson); // update the parent component's state
       }
       setIsFormEditing((prev) => !prev);
+      
     } catch (error) {
       console.error("Failed to update person data", error);
     }
@@ -60,6 +66,7 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
           </div>
         ) : (
           <>
+            {alert.show && <Alert severity={alert.type}>{alert.message}</Alert>}
             <p>Role:{isTeamLead ? <span>⭐</span> : ''}{initRole}</p>
             <p>Department: {department}</p>
             <p>Salary: {salary}</p>

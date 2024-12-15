@@ -1,22 +1,21 @@
 {
   "persons": [
     {
-      "id": "1",
       "name": "Vova",
       "initRole": "expert",
       "department": "Marketing",
       "startDate": "1988-01-01",
       "location": "Espoo",
-      "salary": 666,
+      "salary": "6667",
       "birth": "1950-01-26",
-      "teamLead": false
+      "id": "1"
     },
     {
       "name": "Anna",
       "initRole": "specialist",
       "department": "HR",
       "startDate": "2010-05-15",
-      "location": "Helsinki",
+      "location": "Salo",
       "salary": "2502",
       "birth": "1980-03-14",
       "id": "2"
@@ -44,15 +43,14 @@
       "teamLead": false
     },
     {
-      "id": "5",
       "name": "Michael",
       "initRole": "analyst",
       "department": "Marketing",
       "startDate": "2012-03-08",
-      "location": "Turku",
+      "location": "Ivalo",
       "salary": 3200,
       "birth": "1985-08-15",
-      "teamLead": false
+      "id": "5"
     },
     {
       "id": "6",
