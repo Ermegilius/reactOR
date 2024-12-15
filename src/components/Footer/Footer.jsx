@@ -4,8 +4,9 @@ function Footer() {
   return (
     <footer>
       <div className="footerConteiner">
-        &copy; <span id="year">{new Date().getFullYear()}</span> by Ermegilius
-        (aka Vladimir Beliakov)
+        <p>
+          &copy; <span id="year">{new Date().getFullYear()}</span> by Ermegilius (aka Vladimir Beliakov)
+        </p>
       </div>
     </footer>
   );

@@ -1,26 +1,21 @@
 import { useParams, useNavigate } from "react-router-dom"
-import { useState, useEffect } from "react";
-import axios from 'axios';
+import { useEffect } from "react";
 import Button from "../Button/Button"
+import useAxios from '../../utilis/useAxios.js';
 
 function SinglePage() {
-    const [selectedPerson, setSelectedPerson] = useState("");
-    const [isLoading, setIsLoading] = useState(true);
+    const { data: selectedPerson = {}, loading, get } = useAxios('http://localhost:3001/persons');
     const { id } = useParams();
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/persons/${id}`).
-            then((response) => {
-                setSelectedPerson(response.data);
-                setIsLoading(false);
-            })
-            .catch((error) => {
-                console.error("Error fetching person data", error);
-            });
-    }, [id]);
+        const getPerson = async () => {
+            await get(`${id}`);
+        };
+        getPerson();
+    }, []);
 
-    if (isLoading) {
+    if (loading) {
         return <p>Loading...</p>;
     }
 
