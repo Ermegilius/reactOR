@@ -6,7 +6,7 @@
       "department": "Marketing",
       "startDate": "1988-01-01",
       "location": "Espoo",
-      "salary": "6667",
+      "salary": "31415",
       "birth": "1950-01-26",
       "id": "1"
     },
@@ -32,7 +32,6 @@
       "teamLead": false
     },
     {
-      "id": "4",
       "name": "Emma",
       "initRole": "Designer",
       "department": "Marketing",
@@ -40,7 +39,7 @@
       "location": "Tampere",
       "salary": 2900,
       "birth": "1989-04-30",
-      "teamLead": false
+      "id": "4"
     },
     {
       "name": "Michael",
@@ -85,7 +84,6 @@
       "teamLead": false
     },
     {
-      "id": "9",
       "name": "Robert",
       "initRole": "developer",
       "department": "IT",
@@ -93,7 +91,7 @@
       "location": "Espoo",
       "salary": 4000,
       "birth": "1982-12-22",
-      "teamLead": false
+      "id": "9"
     },
     {
       "id": "10",
@@ -107,14 +105,14 @@
       "teamLead": false
     },
     {
-      "id": "eb6a",
       "name": "Alan Wake",
       "initRole": "Chempion of Light",
       "department": "FBC",
       "startDate": "2001-01-01",
       "location": "Espoo",
       "salary": "666",
-      "birth": "1980-01-01"
+      "birth": "1980-01-01",
+      "id": "eb6a"
     }
   ]
 }

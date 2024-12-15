@@ -1,8 +1,8 @@
 .card {
     display: flex;
     flex-direction: column;
-    background-color: black;
-    color: #d3d3d3;
+    background-color: var(--color-background-darkest);
+    color: var(--color-text-light);
     height: 450px;
     width: 20%;
     min-width: 200px;
@@ -12,23 +12,25 @@
 
 .departmentMarketing {
     background-color: #FFAAFF;
-    color: black;
+    color: var(--color-text-dark)
 }
 
 .departmentHR {
     background-color: #AAAAFF;
-    color: black;
+    color: var(--color-text-dark)
 }
 
 .departmentIT {
     background-color: #FFFFAA;
-    color: black;
+    color: var(--color-text-dark)
 }
 
 .cardImage {
     display: flex;
     justify-content: center;
     height: 30%;
+    margin-bottom: 0.5rem;
+    margin-top: auto;
 }
 
 .cardImage img {
@@ -36,7 +38,7 @@
 }
 
 input {
-    color: #f7f7f7;
+    color: var(--color-text-dark);
     width: 100%;
     text-align: center;
 }
@@ -44,7 +46,6 @@ input {
 .buttonContainer {
     display: flex;
     flex-direction: column;
-    margin-top: auto;
     height: 20%;
     justify-content: space-between;
 }

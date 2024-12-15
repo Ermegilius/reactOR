@@ -77,11 +77,11 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
 
       {(yearsWorked % 5 === 0 && yearsWorked !== 0) ? (<p>&#127183;{congrats}</p>) : ('')}
       {(monthsWorked(startDate, currentDate) < 6) ? (<p>&#9997;Schedule probation review.</p>) : ('')}
-
+      
+      {alert.show && <Alert severity={alert.type}>{alert.message}</Alert>}
       <div className={styles.cardImage}>
         <img src={`https://robohash.org/${name}?set=set5`} alt={name} />
-      </div>
-      {alert.show && <Alert severity={alert.type}>{alert.message}</Alert>}
+      </div>      
 
       <div className={styles.buttonContainer}>
         <Button
