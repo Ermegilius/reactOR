@@ -1,7 +1,7 @@
 footer {
-    background-color: bisque;
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
     height: 5vh;
-
 }
 
 .footerConteiner{

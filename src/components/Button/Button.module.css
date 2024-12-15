@@ -1,13 +1,23 @@
 button{
-    padding: .2rem;
-}
-
-.secondaryButton {
-    background-color: #1a9c00;
-    color: #f7f7f7;
+    padding: var(--button-padding);
+    color: var(--button-color);
+    border: none;
 }
 
 .primaryButton {
-    background-color: rgb(202, 81, 0);
-    color: #f7f7f7;
+    background-color: var(--button-primary-background);
+}
+
+.primaryButton:hover {
+    background-color: var(--button-primary-hover-background);
+    outline: var(--button-primary-hover-outline);
+}
+
+.secondaryButton {
+    background-color: var(--button-secondary-background);
+}
+
+.secondaryButton:hover{
+    background-color: var(--button-secondary-hover-background);
+    outline: var(--button-secondary-hover-outline);
 }
