@@ -25,14 +25,13 @@
     color: black;
 }
 
-.card-image {
+.cardImage {
     display: flex;
     justify-content: center;
     height: 30%;
-    
 }
 
-.card-image img {
+.cardImage img {
     object-fit: cover;
 }
 
@@ -47,5 +46,5 @@ input {
     flex-direction: column;
     margin-top: auto;
     height: 20%;
-    justify-content:space-between;
+    justify-content: space-between;
 }
