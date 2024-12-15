@@ -1,7 +1,8 @@
 import { useState } from "react";
-import axios from 'axios';
+import useAxios from '../utilis/useAxios';
 import Button from "../components/Button/Button";
-import "./Form.css";
+import styles from "./Form.module.css";
+import Alert from '@mui/material/Alert';
 
 const Form = ()=>{
     const [formData, setFormData] = useState(
@@ -16,6 +17,8 @@ const Form = ()=>{
         }
     );
 
+    const { post, alert } = useAxios('http://localhost:3001/persons');
+
     const handleChange = (e) => {
         const {name, value} = e.target;
         setFormData((prevState) => ({...prevState, [name]:value}));
@@ -24,8 +27,7 @@ const Form = ()=>{
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:3001/persons",formData);
-            console.log("Person added successfully: ", formData);
+            await post('', formData);
             //clear the form
             setFormData({
                 name: "",
@@ -36,62 +38,67 @@ const Form = ()=>{
                 salary: "",
                 birth: ""
             });
-            console.log(formData);
         } catch (error) {
         console.error("There was an error submitting the form!", error);
         };
     };
 
     return (
-        <form onSubmit={handleSubmit} className="formBase">
+        <form onSubmit={handleSubmit} className={styles.formBase}>
+            {alert.show && <Alert sx={{mt:1}} severity={alert.type}>{alert.message}</Alert>}
+            <label htmlFor="name">Name:</label>
             <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Name"
+                placeholder="write name here"
             />
+            <label htmlFor="initRole">Role:</label>
             <input
                 type="text"
                 name="initRole"
                 value={formData.initRole}
                 onChange={handleChange}
-                placeholder="Role"
+                placeholder="write role here"
             />
+            <label htmlFor="department">Department:</label>
             <input
                 type="text"
                 name="department"
                 value={formData.department}
                 onChange={handleChange}
-                placeholder="Department"
+                placeholder="write department here"
             />
+            <label htmlFor="startDate">Start Date:</label>
             <input
                 type="date"
                 name="startDate"
                 value={formData.startDate}
                 onChange={handleChange}
-                placeholder="Start Date"
             />
+            <label htmlFor="location">Location:</label>
             <input
                 type="text"
                 name="location"
                 value={formData.location}
                 onChange={handleChange}
-                placeholder="Location"
+                placeholder="write location here"
             />
+            <label htmlFor="salary">Salary:</label>
             <input
                 type="number"
                 name="salary"
                 value={formData.salary}
                 onChange={handleChange}
-                placeholder="Salary"
+                placeholder="write salary here"
             />
+            <label htmlFor="birth">Birth Date:</label>
             <input
                 type="date"
                 name="birth"
                 value={formData.birth}
                 onChange={handleChange}
-                placeholder="Birth Date"
             />
             <Button text="Add new" type="submit" />
         </form>

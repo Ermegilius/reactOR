@@ -19,7 +19,6 @@ const useAxios = (baseUrl) => {
       setLoading(true);
       const response = await axios[method](`${baseUrl}/${endpoint}`, payload);
       setData(response.data);
-      console.log(response.data);
       showAlert('Successfully done!', 'success');
     } catch (err) {
       showAlert(`Error: ${err.message}`, 'error');

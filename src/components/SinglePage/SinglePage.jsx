@@ -1,8 +1,9 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Button from "../Button/Button";
-import Alert from '@mui/material/Alert';
 import useAxios from '../../utilis/useAxios.js';
+import styles from './SinglePage.module.css';
+
 
 function SinglePage() {
     const { data: selectedPerson = {}, loading, get } = useAxios('http://localhost:3001/persons');
@@ -21,10 +22,12 @@ function SinglePage() {
     }
 
     return (
-        <div className="singlePage">
-            <div className="personalCard">
-                <div className="imageSide"></div>
-                <div className="infoSide">
+        <div className={styles.singlePage}>
+            <div className={styles.personalCard}>
+                <div className={styles.imageSide}>
+                    <img src={`https://robohash.org/${selectedPerson.name}?set=set5`} alt={selectedPerson.name} />
+                </div>
+                <div className={styles.infoSide}>
                     <h2>Profile of: {selectedPerson.name}</h2>
                     <p>Position: {selectedPerson.initRole}</p>
                     <p>Department: {selectedPerson.department}</p>

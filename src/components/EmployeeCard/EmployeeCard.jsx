@@ -24,11 +24,10 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
   const { update, alert } = useAxios('http://localhost:3001/persons');
 
   const yearsWorked = currentDate.getFullYear() - new Date(startDate).getFullYear();
-  const congrats = "Schedule recognition meeting."//use it if it's time for a recognition meeting
+  const congrats = "Schedule recognition meeting"//use it if it's time for a recognition meeting
 
   const toggleTeamLead = () => {
     setIsTeamLead((prev) => !prev);//toggles the team lead status
-    console.log("clicked person id: " + id);
   };
 
   const personEditHandler = async () => {
@@ -36,7 +35,6 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
       if (isFormEditing) {
         const updatedPerson = { ...person, id }; 
         await update(`${id}`, updatedPerson);
-        console.log(alert);
         updatePerson(updatedPerson); // update the parent component's state
       }
       setIsFormEditing((prev) => !prev);
@@ -78,7 +76,7 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
       {(yearsWorked % 5 === 0 && yearsWorked !== 0) ? (<p>&#127183;{congrats}</p>) : ('')}
       {(monthsWorked(startDate, currentDate) < 6) ? (<p>&#9997;Schedule probation review.</p>) : ('')}
       
-      {alert.show && <Alert severity={alert.type}>{alert.message}</Alert>}
+      {alert.show && <Alert sx={{mt:1}} severity={alert.type}>{alert.message}</Alert>}
       <div className={styles.cardImage}>
         <img src={`https://robohash.org/${name}?set=set5`} alt={name} />
       </div>      

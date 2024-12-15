@@ -13,7 +13,8 @@ export const router = (loggedIn, LogInAction) => {
         path: "/", element: loggedIn ? (< Root loggedIn={loggedIn} />) : (<Navigate to="/login" />), errorElement: <ErrorPage />,
         children: 
         [
-          { path: "/employees", element: <List /> }, // Removed duplicate Login path
+          {path: "/", element: <List /> },
+          { path: "/employees", element: <List /> },
           { path: "/employees/:id", element: <SinglePage /> },
           { path: "/new", element: <Form /> },
         ],

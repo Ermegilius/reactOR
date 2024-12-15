@@ -1,7 +1,7 @@
 import Button from "../components/Button/Button"
 import { useNavigate } from "react-router-dom"
 
-const Login = ({ LogInAction , loggedIn}) => {
+const Login = ({ LogInAction , loggedIn}) => {//login logic removed until next times
   const navigate = useNavigate();
   const loginHandler = () => {
     LogInAction();
