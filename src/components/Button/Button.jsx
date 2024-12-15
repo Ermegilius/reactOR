@@ -1,7 +1,7 @@
-import './Button.css'
+import styles from './Button.module.css';
 
 const Button = ({onClick, text, type, role}) => {
-    const buttonClass = role === 'secondary' ? 'secondaryButton' : 'primaryButton';
+    const buttonClass = role === 'secondary' ? styles.secondaryButton : styles.primaryButton;;
 
     return (
         <button

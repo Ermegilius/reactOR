@@ -15,7 +15,7 @@
       "initRole": "specialist",
       "department": "HR",
       "startDate": "2010-05-15",
-      "location": "Salo",
+      "location": "Helsinki",
       "salary": "2502",
       "birth": "1980-03-14",
       "id": "2"
@@ -47,7 +47,7 @@
       "initRole": "analyst",
       "department": "Marketing",
       "startDate": "2012-03-08",
-      "location": "Ivalo",
+      "location": "Turku",
       "salary": 3200,
       "birth": "1985-08-15",
       "id": "5"
@@ -64,7 +64,6 @@
       "teamLead": false
     },
     {
-      "id": "7",
       "name": "James",
       "initRole": "sales representative",
       "department": "Marketing",
@@ -72,7 +71,7 @@
       "location": "Espoo",
       "salary": 2700,
       "birth": "1995-11-25",
-      "teamLead": false
+      "id": "7"
     },
     {
       "id": "8",

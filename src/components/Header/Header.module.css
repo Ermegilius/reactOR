@@ -1,7 +1,7 @@
-header {
+.header {
     background-color: aqua;
 }
 
-li {
+.li {
     list-style-type: none;
 }

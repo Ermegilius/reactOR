@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import EmployeeCard from '../EmployeeCard/EmployeeCard.jsx';
-import './EmployeeList.css';
+import styles from './EmployeeList.module.css';
 import useAxios from '../../utilis/useAxios.js';
 
 function EmployeeList() {
-    const { data: persons = [], alert, loading, get, remove, update } = useAxios('http://localhost:3001/persons'); // use custom hook to get data from the server
+    const { data: persons = [], loading, get} = useAxios('http://localhost:3001/persons'); // use custom hook to get data from the server
     const navigate = useNavigate();
     const [employees, setEmployees] = useState([]); // Define the state for employees
 
@@ -33,7 +33,7 @@ function EmployeeList() {
     };
 
     return (
-        <div className='list'>
+        <div className={styles.list}>
             {loading ? (
                 <p>Loading...</p>
             ) : (
