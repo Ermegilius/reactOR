@@ -1,7 +1,8 @@
 {
   "name": "reactor",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "homepage": "https://ermegilius.github.io/reactor/",
   "scripts": {
     "fyl": "vite",
     "build": "vite build",
