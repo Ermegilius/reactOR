@@ -9,7 +9,7 @@ export default defineConfig({
     react(),
     createHtmlPlugin({
       inject: {
-        injectData: {
+        data: {
           title: 'HR app',
         },
       },
