@@ -78,3 +78,4 @@ Add detailed validation to the forms.
 Add "delete" button to remove employees.
 Implement user authentication.
 Improve the UI/UX with more styling and responsive design.
+Somehow find out how to deploy.
