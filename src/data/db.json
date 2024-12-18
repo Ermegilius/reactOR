@@ -114,5 +114,22 @@
       "birth": "1980-01-01",
       "id": "eb6a"
     }
+  ],
+  "users": [
+    {
+      "userId": 1,
+      "username": "Margit",
+      "password": "isthebest"
+    },
+    {
+      "userId": 2,
+      "username": "user",
+      "password": "password"
+    },
+    {
+      "userId": 3,
+      "username": "user",
+      "password": "password"
+    }
   ]
 }
