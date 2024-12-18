@@ -35,6 +35,7 @@
   --line-height: 1.5;
   --font-weight: 400;
   --border-radius-all: 5px;
+  --outline: 1px solid #424242;
 }
 
 body {

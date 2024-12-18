@@ -8,20 +8,26 @@
     min-width: 200px;
     margin: .5rem;
     padding: .5rem;
+    border-radius: var(--border-radius-all);
+    outline: var(--outline);
+}
+
+.card button {
+    width: 80%;
 }
 
 .departmentMarketing {
-    background-color: #FFAAFF;
+    background-color: #FFAAFF60;
     color: var(--color-text-dark)
 }
 
 .departmentHR {
-    background-color: #AAAAFF;
+    background-color: #AAAAFF60;
     color: var(--color-text-dark)
 }
 
 .departmentIT {
-    background-color: #FFFFAA;
+    background-color: #FFFFAA60;
     color: var(--color-text-dark)
 }
 
@@ -46,6 +52,7 @@ input {
 .buttonContainer {
     display: flex;
     flex-direction: column;
-    height: 20%;
+    height: 22%;
     justify-content: space-between;
+    align-items: center;
 }
