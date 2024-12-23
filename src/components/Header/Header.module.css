@@ -1,6 +1,8 @@
 .header {
     background-color: var(--color-background-dark);
     color: var(--color-text-light);
+    border-top-left-radius: var(--border-radius-all);
+    border-top-right-radius: var(--border-radius-all);
 }
 
 .container {

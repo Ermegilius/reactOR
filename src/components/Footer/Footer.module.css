@@ -2,6 +2,8 @@ footer {
     background-color: var(--color-background-dark);
     color: var(--color-text-light);
     height: 5vh;
+    border-bottom-left-radius: var(--border-radius-all);
+    border-bottom-right-radius: var(--border-radius-all);
 }
 
 .footerConteiner{

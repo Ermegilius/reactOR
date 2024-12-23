@@ -42,6 +42,14 @@ The header of the application, containing navigation links.
 
 A custom hook to make requests to the server via axios. It takes the URL as an argument and returns an object with data, alert, loading, get, post, update, and remove properties.
 
+## Deployment
+
+The application is deployed on Netlify and can be accessed at [https://hr-app-ermegilius.netlify.app/](https://hr-app-ermegilius.netlify.app/)
+
+## Authentication
+
+The application includes basic authentication to ensure that only authorized users can access and modify employee information. Users must log in with their credentials to access the main features of the application. Authentication is handled using JWT (JSON Web Tokens) to securely manage user sessions.
+
 ## User Guide
 
 1. Clone the repository:
@@ -68,14 +76,20 @@ npm install
 npm run fyl
 ```
 
+5. Run "server" in another terminal:
+
+```shell
+npm run server
+```
+
+6. Open your browser and go to [http://localhost:3000](http://localhost:3000) to view the application.
+
 ## Reflection
 
-This project helped me understand React components, props, useState and useEffect better. I also gained experience with custom hooks and API requests using axios.
+This project helped me understand React components, props, useState and useEffect better. I gained experience with custom hooks and API requests using axios. And also I learned how to deploy a React application on Netlify.
 
 ## Future Improvements
 
 Add detailed validation to the forms.
 Add "delete" button to remove employees.
-Implement user authentication.
 Improve the UI/UX with more styling and responsive design.
-Deploy the project

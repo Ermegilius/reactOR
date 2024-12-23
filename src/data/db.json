@@ -112,23 +112,36 @@
       "salary": "666",
       "birth": "1980-01-01",
       "id": "eb6a"
+    },
+    {
+      "id": "3d26",
+      "name": "Name",
+      "initRole": "role",
+      "department": "department",
+      "startDate": "2001-01-12",
+      "location": "Ivalo",
+      "salary": "6021023",
+      "birth": "1998-01-01"
     }
   ],
   "users": [
     {
       "userId": 1,
       "username": "Margit",
-      "password": "isthebest"
+      "password": "isthebest",
+      "id": "626c"
     },
     {
       "userId": 2,
       "username": "user",
-      "password": "password"
+      "password": "password",
+      "id": "7211"
     },
     {
       "userId": 3,
       "username": "user",
-      "password": "password"
+      "password": "password",
+      "id": "ada7"
     }
   ]
 }
