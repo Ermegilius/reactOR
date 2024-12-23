@@ -21,7 +21,6 @@
       "id": "2"
     },
     {
-      "id": "3",
       "name": "John",
       "initRole": "developer",
       "department": "IT",
@@ -29,7 +28,7 @@
       "location": "Espoo",
       "salary": 3000,
       "birth": "1992-06-20",
-      "teamLead": false
+      "id": "3"
     },
     {
       "name": "Emma",

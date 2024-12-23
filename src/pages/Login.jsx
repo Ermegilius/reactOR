@@ -50,6 +50,7 @@ const Login = ({ LogInAction, loggedIn }) => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
+            autoComplete="username"
           />
         </div>
         <div className={styles['form-group']}>
@@ -60,6 +61,7 @@ const Login = ({ LogInAction, loggedIn }) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            autoComplete="current-password"
           />
         </div>
         {error && <p className={styles.error}>{error}</p>}

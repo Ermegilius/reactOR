@@ -48,7 +48,12 @@ The application is deployed on Netlify and can be accessed at [https://hr-app-er
 
 ## Authentication
 
-The application includes basic authentication to ensure that only authorized users can access and modify employee information. Users must log in with their credentials to access the main features of the application. Authentication is handled using JWT (JSON Web Tokens) to securely manage user sessions.
+The application includes basic authentication to ensure that only authorized users can access and modify employee information. Users must log in with their credentials to access the main features of the application.
+Right now Authentication is using publickly acceced JSON.
+
+User can use, for example, the following credentials:
+Username: Margit
+Password: isthebest
 
 ## User Guide
 
@@ -91,5 +96,7 @@ This project helped me understand React components, props, useState and useEffec
 ## Future Improvements
 
 Add detailed validation to the forms.
+Add real authentification.
 Add "delete" button to remove employees.
+Make normal Error page instead of current plug.
 Improve the UI/UX with more styling and responsive design.
