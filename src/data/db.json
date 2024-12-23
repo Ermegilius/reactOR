@@ -118,17 +118,20 @@
     {
       "userId": 1,
       "username": "Margit",
-      "password": "isthebest"
+      "password": "isthebest",
+      "id": "0b57"
     },
     {
       "userId": 2,
       "username": "user",
-      "password": "password"
+      "password": "password",
+      "id": "d229"
     },
     {
       "userId": 3,
       "username": "user",
-      "password": "password"
+      "password": "password",
+      "id": "a66e"
     }
   ]
 }
