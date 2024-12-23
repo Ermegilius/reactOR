@@ -62,7 +62,13 @@ cd reactor
 npm install
 ```
 
-4. Run the application:
+4. Run server:
+
+```shell
+npm run server
+```
+
+5. Run the application:
 
 ```shell
 npm run fyl
@@ -76,5 +82,6 @@ This project helped me understand React components, props, useState and useEffec
 
 Add detailed validation to the forms.
 Add "delete" button to remove employees.
-Implement user authentication.
+Implement real user authentication.
 Improve the UI/UX with more styling and responsive design.
+Somehow find out how to deploy.
