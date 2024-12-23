@@ -5,8 +5,6 @@ import monthsWorked from '../../utilis/monthsWorked';
 import getDepartmentClass from "../../utilis/styleUtils";
 import Alert from '@mui/material/Alert';
 import useAxios from '../../utilis/useAxios';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 
 const currentDate = new Date();
 
@@ -68,15 +66,13 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
           <p>Name: {name}</p>
           <p>Role: {isTeamLead ? <span>⭐</span> : ''}{initRole}</p>
           <p>Department: {department}</p>
-          <p>Salary: {salary}</p>
-          <p>Birth: {birth}</p>
-          <p>Location: {location}</p>
-          <p>Years in the company: {yearsWorked}</p>
         </>
       )}
 
+      {/* display message about recognition if the number of years worked is a multiple of 5 and not zero:*/}
       {(yearsWorked % 5 === 0 && yearsWorked !== 0) ? (<p>&#127183;{congrats}</p>) : ('')}
-      {(monthsWorked(startDate, currentDate) < 6) ? (<p>&#9997;Schedule probation review.</p>) : ('')}
+      {/* display message about probation review if the worker is in company less than 6 months:*/}
+      {(monthsWorked(startDate, currentDate) < 6) ? (<p>&#9997;Schedule probation review</p>) : ('')}
       
       {alert.show && <Alert sx={{mt:1}} severity={alert.type}>{alert.message}</Alert>}
       <div className={styles.cardImage}>

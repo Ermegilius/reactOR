@@ -1,5 +1,6 @@
 'use strict'
 
+//calculates the months worked in company using as arguments start date and current date
 const monthsWorked = (startDate, currentDate) => {
     let yearsDifference = currentDate.getFullYear() - new Date(startDate).getFullYear();
     let monthsDifference = currentDate.getMonth() - new Date(startDate).getMonth();

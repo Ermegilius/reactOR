@@ -1,3 +1,6 @@
+'use strict'
+
+//returns classnames depending on departments for further styling
 const getDepartmentClass = (dept) => {
     switch (dept) {
         case "Marketing":
