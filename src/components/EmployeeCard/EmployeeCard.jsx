@@ -53,9 +53,8 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
 
   return (
     <div className={`${styles.card} ${styles[getDepartmentClass(person.department)]}`}>
-      <h2>Name: {name}</h2>
       {isFormEditing ? (
-        <div>
+        <div className={styles.inputBox}>
           <input name="name" type="text" value={person.name} onChange={handleChange} />
           <input name="initRole" type="text" value={person.initRole} onChange={handleChange} />
           <input name="department" type="text" value={person.department} onChange={handleChange} />
@@ -66,7 +65,8 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
         </div>
       ) : (
         <>
-          <p>Role:{isTeamLead ? <span>⭐</span> : ''}{initRole}</p>
+          <p>Name: {name}</p>
+          <p>Role: {isTeamLead ? <span>⭐</span> : ''}{initRole}</p>
           <p>Department: {department}</p>
           <p>Salary: {salary}</p>
           <p>Birth: {birth}</p>

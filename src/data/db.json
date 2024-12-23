@@ -94,7 +94,6 @@
       "id": "9"
     },
     {
-      "id": "10",
       "name": "Olivia",
       "initRole": "junior developer",
       "department": "IT",
@@ -102,7 +101,7 @@
       "location": "Tampere",
       "salary": 2500,
       "birth": "1998-07-18",
-      "teamLead": false
+      "id": "10"
     },
     {
       "name": "Alan Wake",
