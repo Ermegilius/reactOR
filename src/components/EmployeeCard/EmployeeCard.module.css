@@ -1,5 +1,6 @@
 .card {
     display: flex;
+    position: relative;
     flex-direction: column;
     background-color: var(--color-background-darkest);
     color: var(--color-text-light);
@@ -10,6 +11,23 @@
     padding: .5rem;
     border-radius: var(--border-radius-all);
     outline: var(--outline);
+}
+
+.cardHeader {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.deleteIcon {
+    cursor: pointer;
+    opacity: 0.7;
+    color: var(--button-primary-background);
+}
+
+.deleteIcon :hover {
+    
+    color: var(--button-primary-hover-background);
 }
 
 .card button {

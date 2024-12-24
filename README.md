@@ -1,16 +1,16 @@
 # HR application (React + Vite)
 
-This is my study project for several weeks during November-December 2024. The application is designed to manage employee information, including adding new employees, editing existing employee details, and promoting or demoting personnel.
+This is my study project for several weeks during November-December 2024. The application is designed to manage employee information, including adding new employees, editing existing employee details, deleting employee cards, and promoting or demoting personnel.
 
 ## Core features
 
 - **Employee List**: Displays a list of all employees.
-- **Employee Card**: Shows detailed information about an employee, including the ability to edit details and promote/demote the employee.
+- **Employee Card**: Shows detailed information about an employee, including the ability to edit details, delete the card and promote/demote the employee.
 - **Add New Employee**: A form to add new employees to the system.
-- **Error Handling**: Displays an error page when a route is not found.
+- **Error Handling**: Displays an error page when a route is not found or something unexpected happened.
 - **Custom Hooks**: Utilizes a custom hook (`useAxios`) for making API requests.
 
-## Components
+## Components and pages
 
 ### EmployeeList
 
@@ -18,11 +18,11 @@ Displays a list of employees fetched from the server.
 
 ### EmployeeCard
 
-Shows detailed information about an employee and allows editing and promotion/demotion.
+Shows detailed information about an employee and allows editing, deleting and promotion/demotion.
 
 ### Form
 
-A form to add new employees to the system.
+A form to add new employees to the data.
 
 ### ErrorPage
 
@@ -36,6 +36,14 @@ A reusable button component with primary and secondary styles.
 
 The header of the application, containing navigation links.
 
+### Footer
+
+The footer of the application with authors copyright.
+
+### SinglePage
+
+A component to display a single page with delailed information about the person.
+
 ## Custom Hooks
 
 ### useAxios
@@ -44,7 +52,11 @@ A custom hook to make requests to the server via axios. It takes the URL as an a
 
 ## Deployment
 
-The application is deployed on Netlify and can be accessed at [https://hr-app-ermegilius.netlify.app/](https://hr-app-ermegilius.netlify.app/)
+The front-end is deployed on Netlify and can be accessed at [https://hr-app-ermegilius.netlify.app/](https://hr-app-ermegilius.netlify.app/)
+
+The back-end is deployed on Render and can be accessed at [https://hr-app-ermegilius.onrender.com/](https://hr-app-ermegilius.onrender.com/)
+
+Both the front-end and back-end are deployed automatically when changes are pushed to the `main` branch of the Github repository [https://github.com/Ermegilius/reactor/] ( https://github.com/Ermegilius/reactor/).
 
 ## Authentication
 
@@ -52,8 +64,8 @@ The application includes basic authentication to ensure that only authorized use
 Right now Authentication is using publickly acceced JSON.
 
 User can use, for example, the following credentials:
-Username: Margit
-Password: isthebest
+_Username: Margit_
+_Password: isthebest_
 
 ## User Guide for a local setup
 
@@ -101,6 +113,7 @@ This project helped me understand React components, props, useState and useEffec
 
 Add detailed validation to the forms.
 Add real authentification.
-Add "delete" button to remove employees.
 Make normal Error page instead of current plug.
 Improve the UI/UX with more styling and responsive design.
+Add more features like sorting and filtering employees.
+Add more tests to ensure the application is robust and reliable.

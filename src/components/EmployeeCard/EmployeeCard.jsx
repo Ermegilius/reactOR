@@ -4,10 +4,11 @@ import styles from './EmployeeCard.module.css';
 import monthsWorked from '../../utilis/monthsWorked';
 import getDepartmentClass from "../../utilis/styleUtils";
 import Alert from '@mui/material/Alert';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const currentDate = new Date();
 
-const EmployeeCard = ({ id, name, initRole, department, startDate, location, salary, birth, handleNavigate, updatePerson }) => {
+const EmployeeCard = ({ id, name, initRole, department, startDate, location, salary, birth, handleNavigate, updatePerson, deletePerson }) => {
   const [isTeamLead, setIsTeamLead] = useState(false); // rerenders in case of promotion
   const [isFormEditing, setIsFormEditing] = useState(false); // rerenders in case of editing
   const [person, setPerson] = useState({
@@ -47,6 +48,9 @@ const EmployeeCard = ({ id, name, initRole, department, startDate, location, sal
 
   return (
     <div className={`${styles.card} ${styles[getDepartmentClass(person.department)]}`}>
+      <div className={styles.cardHeader}>
+        <DeleteIcon className={styles.deleteIcon} onClick={() => deletePerson(id)} />
+      </div>
       <div className={styles.cardImage}>
         <img src={avatarUrl} alt={name} />
       </div> 
