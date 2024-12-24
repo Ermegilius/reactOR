@@ -21,7 +21,7 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
     birth: birth,
   });
 
-  const { update, alert } = useAxios('http://localhost:3001/persons');
+  const { update, alert } = useAxios('https://reactor-uinv.onrender.com/persons');
 
   const yearsWorked = currentDate.getFullYear() - new Date(startDate).getFullYear();
   const congrats = "Schedule recognition meeting"//use it if it's time for a recognition meeting
@@ -51,6 +51,9 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
 
   return (
     <div className={`${styles.card} ${styles[getDepartmentClass(person.department)]}`}>
+      <div className={styles.cardImage}>
+        <img src={`https://robohash.org/${name}?set=set5`} alt={name} />
+      </div> 
       {isFormEditing ? (
         <div className={styles.inputBox}>
           <input name="name" type="text" value={person.name} onChange={handleChange} />
@@ -74,10 +77,7 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
       {/* display message about probation review if the worker is in company less than 6 months:*/}
       {(monthsWorked(startDate, currentDate) < 6) ? (<p>&#9997;Schedule probation review</p>) : ('')}
       
-      {alert.show && <Alert sx={{mt:1}} severity={alert.type}>{alert.message}</Alert>}
-      <div className={styles.cardImage}>
-        <img src={`https://robohash.org/${name}?set=set5`} alt={name} />
-      </div>      
+      {alert.show && <Alert sx={{mt:1}} severity={alert.type}>{alert.message}</Alert>}   
 
       <div className={styles.buttonContainer}>
         <Button

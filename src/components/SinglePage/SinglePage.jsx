@@ -6,7 +6,7 @@ import styles from './SinglePage.module.css';
 
 
 function SinglePage() {
-    const { data: selectedPerson = {}, loading, get } = useAxios('http://localhost:3001/persons');
+    const { data: selectedPerson = {}, loading, get } = useAxios('https://reactor-uinv.onrender.com/persons');
     const { id } = useParams();
     const navigate = useNavigate();
 

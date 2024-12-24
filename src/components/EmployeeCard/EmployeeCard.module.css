@@ -36,7 +36,6 @@
     justify-content: center;
     height: 35%;
     margin-bottom: 0.5rem;
-    margin-top: auto;
 }
 
 .cardImage img {
@@ -66,5 +65,5 @@ input {
     height: 22%;
     justify-content: space-between;
     align-items: center;
-
+    margin-top: auto;
 }

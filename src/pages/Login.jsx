@@ -13,7 +13,7 @@ const Login = ({ LogInAction, loggedIn }) => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch('http://localhost:3001/users');
+        const response = await fetch('https://reactor-uinv.onrender.com/users');
         if (!response.ok) {
           throw new Error("Network error. Can't get users db");
         }

@@ -5,7 +5,7 @@ import styles from './EmployeeList.module.css';
 import useAxios from '../../utilis/useAxios.js';
 
 function EmployeeList() {
-    const { data: persons = [], loading, get} = useAxios('http://localhost:3001/persons'); // use custom hook to get data from the server
+    const { data: persons = [], loading, get} = useAxios('https://reactor-uinv.onrender.com/persons'); // use custom hook to get data from the server
     const navigate = useNavigate();
     const [employees, setEmployees] = useState([]); // Define the state for employees
 
