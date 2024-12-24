@@ -12,7 +12,7 @@ function SinglePage() {
 
     useEffect(() => {
         const getPerson = async () => {
-            await get(`${id}`);
+            await get(`/${id}`);
         };
         getPerson();
     }, []);

@@ -4,14 +4,12 @@ import styles from './EmployeeCard.module.css';
 import monthsWorked from '../../utilis/monthsWorked';
 import getDepartmentClass from "../../utilis/styleUtils";
 import Alert from '@mui/material/Alert';
-import useAxios from '../../utilis/useAxios';
-import { backEndUrl } from '../../data/globalVariables.js';
 
 const currentDate = new Date();
 
-const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,birth, handleNavigate, updatePerson}) => {
-  const [isTeamLead, setIsTeamLead] = useState(false);//rerenders in case of pomotion
-  const [isFormEditing, setIsFormEditing] = useState(false);//rerenders in case of editting
+const EmployeeCard = ({ id, name, initRole, department, startDate, location, salary, birth, handleNavigate, updatePerson }) => {
+  const [isTeamLead, setIsTeamLead] = useState(false); // rerenders in case of promotion
+  const [isFormEditing, setIsFormEditing] = useState(false); // rerenders in case of editing
   const [person, setPerson] = useState({
     name: name,
     initRole: initRole,
@@ -21,9 +19,7 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
     salary: salary,
     birth: birth,
   });
-
-  const { update, alert } = useAxios(`${backEndUrl}/persons`);
-
+  const avatarUrl = `https://robohash.org/${name}?set=set5`;
   const yearsWorked = currentDate.getFullYear() - new Date(startDate).getFullYear();
   const congrats = "Schedule recognition meeting"//use it if it's time for a recognition meeting
 
@@ -35,8 +31,7 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
     try{
       if (isFormEditing) {
         const updatedPerson = { ...person, id }; 
-        await update(`${id}`, updatedPerson);
-        updatePerson(updatedPerson); // update the parent component's state
+        await updatePerson(updatedPerson); // update the parent component's state
       }
       setIsFormEditing((prev) => !prev);
       
@@ -53,7 +48,7 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
   return (
     <div className={`${styles.card} ${styles[getDepartmentClass(person.department)]}`}>
       <div className={styles.cardImage}>
-        <img src={`https://robohash.org/${name}?set=set5`} alt={name} />
+        <img src={avatarUrl} alt={name} />
       </div> 
       {isFormEditing ? (
         <div className={styles.inputBox}>

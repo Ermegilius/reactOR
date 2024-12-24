@@ -3,6 +3,7 @@ import useAxios from '../utilis/useAxios';
 import Button from "../components/Button/Button";
 import styles from "./Form.module.css";
 import Alert from '@mui/material/Alert';
+import { backEndUrl } from '../data/globalVariables.js';
 
 const Form = ()=>{
     const [formData, setFormData] = useState(
@@ -17,7 +18,7 @@ const Form = ()=>{
         }
     );
 
-    const { post, alert } = useAxios('http://localhost:3001/persons');
+    const { post, alert } = useAxios(`${backEndUrl}/persons`);
 
     const handleChange = (e) => {
         const {name, value} = e.target;
