@@ -7,6 +7,7 @@ This is my study project for several weeks during November-December 2024. The ap
 - **Employee List**: Displays a list of all employees.
 - **Employee Card**: Shows detailed information about an employee, including the ability to edit details, delete the card and promote/demote the employee.
 - **Add New Employee**: A form to add new employees to the system.
+- **Delete Employee's card**: Allows users to delete an employee card.
 - **Error Handling**: Displays an error page when a route is not found or something unexpected happened.
 - **Custom Hooks**: Utilizes a custom hook (`useAxios`) for making API requests.
 
