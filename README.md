@@ -55,7 +55,7 @@ User can use, for example, the following credentials:
 Username: Margit
 Password: isthebest
 
-## User Guide
+## User Guide for a local setup
 
 1. Clone the repository:
 
@@ -81,7 +81,11 @@ npm install
 npm run fyl
 ```
 
-5. Run "server" in another terminal:
+5. Run server in another terminal.
+
+- by default the app uses my server deployed on Render, but you can use your local server.
+- If you use local beck-end server change the URL in the data/globalVariables.
+- To run the local server use the following command:
 
 ```shell
 npm run server
@@ -91,7 +95,7 @@ npm run server
 
 ## Reflection
 
-This project helped me understand React components, props, useState and useEffect better. I gained experience with custom hooks and API requests using axios. And also I learned how to deploy a React application on Netlify.
+This project helped me understand React components, props, useState and useEffect better. I gained experience with custom hooks and API requests using axios. And also I learned how to deploy a React application on Netlify and Render.
 
 ## Future Improvements
 

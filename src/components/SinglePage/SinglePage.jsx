@@ -3,10 +3,10 @@ import { useEffect } from "react";
 import Button from "../Button/Button";
 import useAxios from '../../utilis/useAxios.js';
 import styles from './SinglePage.module.css';
-
+import { backEndUrl } from '../../data/globalVariables.js';
 
 function SinglePage() {
-    const { data: selectedPerson = {}, loading, get } = useAxios('https://reactor-uinv.onrender.com/persons');
+    const { data: selectedPerson = {}, loading, get } = useAxios(`${backEndUrl}/persons`);
     const { id } = useParams();
     const navigate = useNavigate();
 

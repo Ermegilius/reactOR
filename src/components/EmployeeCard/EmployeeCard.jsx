@@ -5,6 +5,7 @@ import monthsWorked from '../../utilis/monthsWorked';
 import getDepartmentClass from "../../utilis/styleUtils";
 import Alert from '@mui/material/Alert';
 import useAxios from '../../utilis/useAxios';
+import { backEndUrl } from '../../data/globalVariables.js';
 
 const currentDate = new Date();
 
@@ -21,7 +22,7 @@ const EmployeeCard = ({id,name,initRole,department,startDate,location,salary,bir
     birth: birth,
   });
 
-  const { update, alert } = useAxios('https://reactor-uinv.onrender.com/persons');
+  const { update, alert } = useAxios(`${backEndUrl}/persons`);
 
   const yearsWorked = currentDate.getFullYear() - new Date(startDate).getFullYear();
   const congrats = "Schedule recognition meeting"//use it if it's time for a recognition meeting
