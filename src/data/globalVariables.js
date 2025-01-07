@@ -1,4 +1,4 @@
-'use strinct';
+'use strict';
 
 //for my deployed on Render server:
 const backEndUrl = 'https://reactor-uinv.onrender.com';
