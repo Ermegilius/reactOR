@@ -31,7 +31,7 @@ const Login = ({ LogInAction, loggedIn }) => {
     );
     if (user) {
       LogInAction(user);
-      navigate("/dashboard");
+      navigate("/");
     } else {
       setError("Invalid username or password");
     }
