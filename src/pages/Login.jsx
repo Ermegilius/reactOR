@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button/Button";
 import styles from "./Login.module.css";
-import useAxios from "../../utilis/useAxios.js";
-import { backEndUrl } from "../../data/globalVariables.js";
+import useAxios from "../utilis/useAxios.js";
+import { backEndUrl } from "../data/globalVariables.js";
 
 const Login = ({ LogInAction, loggedIn }) => {
   const [username, setUsername] = useState("");
