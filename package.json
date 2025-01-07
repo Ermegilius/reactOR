@@ -12,7 +12,7 @@
     "server": "json-server --watch ./src/data/db.json --port 3001",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "start": "concurrently \"serve -s dist\" \"node server.js\""
+    "start": "concurrently \"serve -s dist\" \"npm run server\" \"node server.js\""
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
