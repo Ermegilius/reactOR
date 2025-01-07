@@ -55,7 +55,7 @@ A custom hook to make requests to the server via axios. It takes the URL as an a
 
 The front-end is deployed on Netlify and can be accessed at [https://hr-app-ermegilius.netlify.app/](https://hr-app-ermegilius.netlify.app/)
 
-The back-end is deployed on Render and can be accessed at [https://hr-app-ermegilius.onrender.com/](https://hr-app-ermegilius.onrender.com/)
+The back-end is deployed on Render and can be accessed at [https://reactor-uinv.onrender.com/](https://reactor-uinv.onrender.com/)
 
 Both the front-end and back-end are deployed automatically when changes are pushed to the `main` branch of the Github repository [https://github.com/Ermegilius/reactor/] ( https://github.com/Ermegilius/reactor/).
 
@@ -104,7 +104,7 @@ npm run fyl
 npm run server
 ```
 
-6. Open your browser and go to [http://localhost:3000](http://localhost:3000) to view the application.
+6. Open your browser and go to [http://localhost:3001](http://localhost:3001) to view the application.
 
 ## Reflection
 
