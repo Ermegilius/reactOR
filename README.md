@@ -53,6 +53,8 @@ A custom hook to make requests to the server via axios. It takes the URL as an a
 
 ## Deployment
 
+My artistic choice of deployment is to use two different services for front-end and back-end. I wanted to learn using both of them. It also feels cleaner, when backend json-server "server" is hidden away from people's eyes.
+
 The front-end is deployed on Netlify and can be accessed at [https://hr-app-ermegilius.netlify.app/](https://hr-app-ermegilius.netlify.app/)
 
 The back-end is deployed on Render and can be accessed at [https://reactor-uinv.onrender.com/](https://reactor-uinv.onrender.com/)
@@ -67,46 +69,8 @@ The application includes basic authentication to ensure that only authorized use
 Right now Authentication is using publickly acceced JSON.
 
 User can use, for example, the following credentials:
-_Username: Margit_
-_Password: isthebest_
-
-## User Guide for a local setup
-
-1. Clone the repository:
-
-```shell
-   git clone https://github.com/Ermegilius/reactor.git
-```
-
-2. Navigate to the project folder:
-
-```shell
-cd reactor
-```
-
-3. Install dependencies:
-
-```shell
-npm install
-```
-
-4. Run the application:
-
-```shell
-npm run fyl
-```
-
-5. Run server in another terminal.
-
-- by default the app uses my server deployed on Render, but you can use your local server.
-- If you use local beck-end server change the URL in the data/globalVariables.
-- To run the local server use the following command:
-
-```shell
-npm run server
-```
-
-6. Open your browser and go to [http://localhost:3001](http://localhost:3001) to view the application.
+Username: Margit
+Password: isthebest
 
 ## Reflection
 
