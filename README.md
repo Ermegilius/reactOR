@@ -57,7 +57,9 @@ The front-end is deployed on Netlify and can be accessed at [https://hr-app-erme
 
 The back-end is deployed on Render and can be accessed at [https://reactor-uinv.onrender.com/](https://reactor-uinv.onrender.com/)
 
-Both the front-end and back-end are deployed automatically when changes are pushed to the `main` branch of the Github repository [https://github.com/Ermegilius/reactor/] ( https://github.com/Ermegilius/reactor/).
+The front-end is deployed automatically when changes are pushed to the `main` branch of the Github repository [https://github.com/Ermegilius/reactor/] ( https://github.com/Ermegilius/reactor/).
+
+The back-end is deployed automatically when changes are pushed to the `main` branch of the Github repository [https://github.com/Ermegilius/reactor-backend/] ( https://github.com/Ermegilius/reactor-backend/).
 
 ## Authentication
 
