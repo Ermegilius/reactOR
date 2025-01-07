@@ -1,5 +1,6 @@
 {
   "name": "reactor",
+  "type": "module",
   "private": true,
   "version": "0.0.1",
   "author": "Ermegilius, <ermegilius@gmail.com>",
@@ -8,11 +9,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "json-server --watch ./src/data/db.json --port 3001",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "start": "node server.js",
-    "serve": "serve -s dist"
+    "start": "serve -s dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -20,8 +19,8 @@
     "@mui/icons-material": "^6.3.0",
     "@mui/material": "^6.2.0",
     "axios": "^1.7.8",
+    "concurrently": "^9.1.2",
     "cors": "^2.8.5",
-    "json-server": "^1.0.0-beta.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.0.0",
