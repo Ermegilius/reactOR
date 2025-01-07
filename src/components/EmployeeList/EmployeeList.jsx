@@ -21,7 +21,7 @@ function EmployeeList() {
       await get("");
     };
     getPersons();
-  }, []);
+  }, [get]);
 
   useEffect(() => {
     if (Array.isArray(persons)) {
