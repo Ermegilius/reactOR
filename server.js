@@ -14,7 +14,7 @@ server.use(jsonServer.bodyParser);
 server.use(middlewares);
 server.use(router);
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT;
 
 server.listen(PORT, () => {
   console.log(`JSON Server is running on ${backEndUrl}:${PORT}`);
