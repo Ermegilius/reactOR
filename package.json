@@ -1,5 +1,6 @@
 {
   "name": "reactor",
+  "type": "module",
   "private": true,
   "version": "0.0.1",
   "author": "Ermegilius, <ermegilius@gmail.com>",
