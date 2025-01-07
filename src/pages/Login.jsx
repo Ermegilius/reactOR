@@ -1,40 +1,39 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Button from '../components/Button/Button';
-import styles from './Login.module.css';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Button from "../components/Button/Button";
+import styles from "./Login.module.css";
+import useAxios from "../../utilis/useAxios.js";
+import { backEndUrl } from "../../data/globalVariables.js";
 
 const Login = ({ LogInAction, loggedIn }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const [users, setUsers] = useState([]);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const { data: users, get } = useAxios(backEndUrl);
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch('https://reactor-uinv.onrender.com/users');
-        if (!response.ok) {
-          throw new Error("Network error. Can't get users db");
-        }
-        const data = await response.json();
-        setUsers(data);
+        await get("/users");
       } catch (error) {
-        setError('Failed to fetch users');
+        setError("Failed to fetch users");
       }
     };
 
     fetchUsers();
-  }, []);
+  }, [get]);
 
   const loginHandler = (e) => {
     e.preventDefault();
-    const user = users.find(user => user.username === username && user.password === password);
+    const user = users.find(
+      (user) => user.username === username && user.password === password
+    );
     if (user) {
-      LogInAction(user.userId, username, password);
-      navigate('/');
+      LogInAction(user);
+      navigate("/dashboard");
     } else {
-      setError('Invalid username or password');
+      setError("Invalid username or password");
     }
   };
 
@@ -42,7 +41,7 @@ const Login = ({ LogInAction, loggedIn }) => {
     <div className={styles.container}>
       <h2>Login</h2>
       <form onSubmit={loginHandler}>
-        <div className={styles['form-group']}>
+        <div className={styles["form-group"]}>
           <label htmlFor="username">Username:</label>
           <input
             type="text"
@@ -53,7 +52,7 @@ const Login = ({ LogInAction, loggedIn }) => {
             autoComplete="username"
           />
         </div>
-        <div className={styles['form-group']}>
+        <div className={styles["form-group"]}>
           <label htmlFor="password">Password:</label>
           <input
             type="password"
