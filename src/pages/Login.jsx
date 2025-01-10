@@ -9,7 +9,7 @@ const Login = ({ LogInAction, loggedIn }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { data: users, get } = useAxios(backEndUrl);
+  const { data: users, get, loading } = useAxios(backEndUrl);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -26,6 +26,10 @@ const Login = ({ LogInAction, loggedIn }) => {
 
   const loginHandler = (e) => {
     e.preventDefault();
+    if (loading) {
+      setError("Please wait, loading users...");
+      return;
+    }
     const user = users.find(
       (user) => user.username === username && user.password === password
     );
