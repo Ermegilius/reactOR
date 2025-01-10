@@ -5,35 +5,29 @@ import styles from "./Login.module.css";
 import useAxios from "../utilis/useAxios.js";
 import { backEndUrl } from "../data/globalVariables.js";
 
-const Login = ({ LogInAction, loggedIn }) => {
+const Login = ({ LogInAction }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { data: users, get } = useAxios(backEndUrl);
+  const { get } = useAxios(backEndUrl);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        await get("/users");
-      } catch (error) {
-        setError("Failed to fetch users");
-      }
-    };
-
-    fetchUsers();
-  }, [get]);
-
-  const loginHandler = (e) => {
+  const loginHandler = async (e) => {
     e.preventDefault();
-    const user = users.find(
-      (user) => user.username === username && user.password === password
-    );
-    if (user) {
-      LogInAction(user);
-      navigate("/");
-    } else {
-      setError("Invalid username or password");
+    setError("Please wait, loading users...");
+    try {
+      const fetchedUsers = await get("/users");
+      const user = fetchedUsers.find(
+        (user) => user.username === username && user.password === password
+      );
+      if (user) {
+        LogInAction(user);
+        navigate("/");
+      } else {
+        setError("Invalid username or password");
+      }
+    } catch (error) {
+      setError("Failed to fetch users");
     }
   };
 
