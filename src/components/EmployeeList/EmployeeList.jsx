@@ -12,13 +12,13 @@ function EmployeeList() {
     get,
     update,
     remove,
-  } = useAxios(`${backEndUrl}/persons`); // use custom hook to get data from the server
+  } = useAxios(`${backEndUrl}`); // use custom hook to get data from the server
   const navigate = useNavigate();
   const [employees, setEmployees] = useState([]); // Define the state for employees
 
   useEffect(() => {
     const getPersons = async () => {
-      await get("");
+      await get("/persons");
     };
     getPersons();
   }, []);
@@ -38,7 +38,7 @@ function EmployeeList() {
   //function to update the person data
   const updatePerson = async (updatedPerson) => {
     try {
-      await update(`/${updatedPerson.id}`, updatedPerson);
+      await update(`/persons/${updatedPerson.id}`, updatedPerson);
       setEmployees((prevPersons) =>
         Array.isArray(prevPersons)
           ? prevPersons.map((person) =>
@@ -54,12 +54,13 @@ function EmployeeList() {
   //function to delete the person
   const deletePerson = async (id) => {
     try {
-      await remove(`/${id}`);
-      setEmployees((prevPersons) =>
-        Array.isArray(prevPersons)
+      await remove(`/persons/${id}`);
+      setEmployees((prevPersons) => {
+        const updatedPersons = Array.isArray(prevPersons)
           ? prevPersons.filter((person) => person.id !== id)
-          : []
-      );
+          : [];
+        return updatedPersons;
+      });
     } catch (error) {
       console.error("Failed to delete person", error);
     }

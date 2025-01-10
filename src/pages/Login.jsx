@@ -2,21 +2,19 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button/Button";
 import styles from "./Login.module.css";
-import useAxios from "../utilis/useAxios.js";
-import { backEndUrl } from "../data/globalVariables.js";
+import usersData from "../data/users.json"; // Import the local users.json file
 
 const Login = ({ LogInAction }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { get } = useAxios(backEndUrl);
   const navigate = useNavigate();
 
   const loginHandler = async (e) => {
     e.preventDefault();
     setError("Please wait, loading users...");
     try {
-      const fetchedUsers = await get("/users");
+      const fetchedUsers = usersData.users; // Use the imported users data
       const user = fetchedUsers.find(
         (user) => user.username === username && user.password === password
       );

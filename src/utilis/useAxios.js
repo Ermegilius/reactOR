@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import axios from 'axios';
+import { useState } from "react";
+import axios from "axios";
 
 const useAxios = (baseUrl) => {
-  const [data, setData] = useState([]); // data is the response from the server, [] by default 
-  const [alert, setAlert] = useState({ show: false, message: '', type: '' }); // alert is an object with show, message, and type properties, initially set to false, empty string, and empty string
+  const [data, setData] = useState([]); // data is the response from the server, [] by default
+  const [alert, setAlert] = useState({ show: false, message: "", type: "" }); // alert is an object with show, message, and type properties, initially set to false, empty string, and empty string
   const [loading, setLoading] = useState(false);
 
   const showAlert = (message, type) => {
     setAlert({ show: true, message, type });
-    setTimeout(() => setAlert({ show: false, message: '', type: '' }), 3000);
+    setTimeout(() => setAlert({ show: false, message: "", type: "" }), 3000);
   };
 
   const makeRequest = async (method, endpoint, payload = null) => {
@@ -19,15 +19,18 @@ const useAxios = (baseUrl) => {
         url: `${baseUrl}${endpoint}`,
         data: payload,
       });
-      if (method === 'get') {
+      if (method === "get") {
         setData(response.data);
       }
-      if (method === 'post') {
-        showAlert('Person added successfully', 'success');
+      if (method === "post") {
+        showAlert("Person added successfully", "success");
+      }
+      if (method === "delete") {
+        showAlert("Person deleted successfully", "success");
       }
       return response.data;
     } catch (error) {
-      showAlert(error.message, 'error');
+      showAlert(error.message, "error");
       throw error;
     } finally {
       setLoading(false);
@@ -35,10 +38,12 @@ const useAxios = (baseUrl) => {
   };
 
   // all methods:
-  const get = async (endpoint) => makeRequest('get', endpoint);
-  const post = async (endpoint, payload) => makeRequest('post', endpoint, payload);
-  const update = async (endpoint, payload) => makeRequest('put', endpoint, payload);
-  const remove = async (endpoint) => makeRequest('delete', endpoint);
+  const get = async (endpoint) => makeRequest("get", endpoint);
+  const post = async (endpoint, payload) =>
+    makeRequest("post", endpoint, payload);
+  const update = async (endpoint, payload) =>
+    makeRequest("put", endpoint, payload);
+  const remove = async (endpoint) => makeRequest("delete", endpoint);
 
   return { data, alert, loading, get, post, update, remove };
 };
