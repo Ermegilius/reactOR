@@ -1,15 +1,17 @@
 # HR application (React + Vite)
 
+[![Quality Gate Status](http://localhost:9000/api/project_badges/measure?project=reactor&metric=alert_status&token=sqb_1a6455005ce1a80ddc6ffc870b51926245bcf76b)](http://localhost:9000/dashboard?id=reactor)
+
 This is my study project for several weeks during November-December 2024. The application is designed to manage employee information, including adding new employees, editing existing employee details, deleting employee cards, and promoting or demoting personnel.
 
 ## Core features
 
-- **Employee List**: Displays a list of all employees.
-- **Employee Card**: Shows detailed information about an employee, including the ability to edit details, delete the card and promote/demote the employee.
-- **Add New Employee**: A form to add new employees to the system.
-- **Delete Employee's card**: Allows users to delete an employee card.
-- **Error Handling**: Displays an error page when a route is not found or something unexpected happened.
-- **Custom Hooks**: Utilizes a custom hook (`useAxios`) for making API requests.
+-   **Employee List**: Displays a list of all employees.
+-   **Employee Card**: Shows detailed information about an employee, including the ability to edit details, delete the card and promote/demote the employee.
+-   **Add New Employee**: A form to add new employees to the system.
+-   **Delete Employee's card**: Allows users to delete an employee card.
+-   **Error Handling**: Displays an error page when a route is not found or something unexpected happened.
+-   **Custom Hooks**: Utilizes a custom hook (`useAxios`) for making API requests.
 
 ## Components and pages
 
