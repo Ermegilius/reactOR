@@ -1,6 +1,6 @@
 # HR application (React + Vite)
 
-[![Quality Gate Status](http://localhost:9000/api/project_badges/measure?project=reactor&metric=alert_status&token=sqb_1a6455005ce1a80ddc6ffc870b51926245bcf76b)](http://localhost:9000/dashboard?id=reactor)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Ermegilius_reactor&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Ermegilius_reactor)
 
 This is my study project for several weeks during November-December 2024. The application is designed to manage employee information, including adding new employees, editing existing employee details, deleting employee cards, and promoting or demoting personnel.
 
