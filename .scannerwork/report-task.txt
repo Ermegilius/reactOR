@@ -1,6 +1,6 @@
-projectKey=reactor
+projectKey=test_project_1
 serverUrl=http://localhost:9000
 serverVersion=25.2.0.102705
-dashboardUrl=http://localhost:9000/dashboard?id=reactor
-ceTaskId=df6b57e9-96f5-4691-a3c1-e309ab99d829
-ceTaskUrl=http://localhost:9000/api/ce/task?id=df6b57e9-96f5-4691-a3c1-e309ab99d829
+dashboardUrl=http://localhost:9000/dashboard?id=test_project_1
+ceTaskId=68ae0962-2d2b-4ae8-9a1e-76e2879a0dc4
+ceTaskUrl=http://localhost:9000/api/ce/task?id=68ae0962-2d2b-4ae8-9a1e-76e2879a0dc4
