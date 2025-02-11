@@ -86,3 +86,5 @@ Make normal Error page instead of current plug.
 Improve the UI/UX with more styling and responsive design.
 Add more features like sorting and filtering employees.
 Add more tests to ensure the application is robust and reliable.
+
+## Test 2
